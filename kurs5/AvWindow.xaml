@@ -1,0 +1,40 @@
+﻿<Window x:Class="kurs5.AvWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs5"
+        mc:Ignorable="d"
+        Icon="C:\Users\Owl\Downloads\Yandex.Disk.Files\Богатова_Д_Д\программа\kurs5\kurs5\3.png"
+        Title="bookBuy" Height="800" Width="1300" Background="#fcf1f1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="480*"/>
+            <RowDefinition Height="130*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" >
+            <Image Source="C:\Users\Owl\Downloads\Yandex.Disk.Files\Богатова_Д_Д\программа\kurs5\kurs5\1.png" Height="140" />
+        </StackPanel>
+        <!--Книги-->
+        <Button Name="BT1" Click="BT1_Click" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="80" Background="#ffd6ce" Margin="25,27.6,25,23.6">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontFamily="Georgia" Foreground="#4f4055" Text="Книги"/>
+        </Button>
+        <!--Корзина-->
+        <Button Name="BT2" Click="BT2_Click" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="80" Background="#ffd6ce" Margin="25,9.4,25,9">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontFamily="Georgia" Foreground="#4f4055" Text="Корзина"/>
+        </Button>
+        <!--Выход-->
+        <Button Name="BT4" Click="BT4_Click" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="150" Height="50" Background="#ffd6ce" Margin="0,0,14.6,10.4">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontFamily="Georgia" Foreground="#4f4055" Text="Выход"/>
+        </Button>
+        <Frame x:Name="FRFR" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3"></Frame>
+
+    </Grid>
+</Window>

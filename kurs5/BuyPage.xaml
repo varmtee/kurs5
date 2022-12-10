@@ -1,0 +1,48 @@
+﻿<Page x:Class="kurs5.BuyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kurs5"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BuyPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="3" BorderBrush="AliceBlue">
+            <DataGrid x:Name="dtgBook" VerticalAlignment="Top" FontFamily="Georgia" Foreground="#4f4055" FontSize="25" AutoGenerateColumns="False" Height="225" Width="500" Grid.Row="0" Grid.Column="0" IsReadOnly="True" Background="#ffd6ce">
+                <DataGrid.Columns>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="   Название   " Binding="{Binding Kniga}"/>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="   Цена   " Binding="{Binding Cena}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Border BorderThickness="3" Grid.Row="1" BorderBrush="AliceBlue">
+            <DataGrid x:Name="dtgBuy" VerticalAlignment="Top" FontFamily="Georgia" Foreground="#4f4055" FontSize="25" AutoGenerateColumns="False" Height="225" Width="600" Grid.Row="1" Grid.Column="0" IsReadOnly="True" Background="#ffd6ce">
+                <DataGrid.Columns>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="  Номер  " Binding="{Binding id_pok}"/>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="  Название  " Binding="{Binding Nazvanie   }"/>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="  Цена  " Binding="{Binding Price}"/>
+                    <DataGridTextColumn FontFamily="Georgia" Foreground="#4f4055" FontSize="25" Header="  Статус  " Binding="{Binding Status}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <TextBox x:Name="VID" Grid.Row="0" Grid.Column="1" Width="150" Height="40" Margin="0 0 0 120" Background="WhiteSmoke" FontFamily="Georgia" FontSize="30" ></TextBox>
+        <Button x:Name="BuyBT" Click="BuyBT_Click" Grid.Column="1" Width="250" Height="50" FontFamily="Georgia" Foreground="#4f4055" Background="#ffd6ce" FontSize="30">Зарезервировать</Button>
+        <Button x:Name="BackBT" Click="BackBT_Click" Grid.Column="1" Width="150" Height="50" FontFamily="Georgia" Foreground="#4f4055" Background="#ffd6ce" FontSize="30" Margin="0 150 0 0">Назад</Button>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Button x:Name="ABT" Click="ABT_Click" Width="150" Height="50" VerticalAlignment="Top" FontFamily="Georgia" Foreground="#4f4055" Background="#ffd6ce" FontSize="30">Добавить</Button>
+            <Button x:Name="DeleteBT" Click="DeleteBT_Click" Width="150" Height="50" VerticalAlignment="Center" FontFamily="Georgia" Foreground="#4f4055" Background="#ffd6ce" FontSize="30">Удалить</Button>
+            <Button x:Name="RefBT" Click="RefBT_Click" Width="150" Height="50" VerticalAlignment="Bottom" FontFamily="Georgia" Foreground="#4f4055" Background="#ffd6ce" FontSize="30">Обновить</Button>
+        </Grid>
+    </Grid>
+
+</Page>
